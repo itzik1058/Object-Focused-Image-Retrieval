@@ -58,11 +58,11 @@ def main():
     dataset = datasets.CelebA('', split='train', transform=transforms.Compose([transforms.Resize(64),
                                                                                transforms.ToTensor()]))
     test_dataset = datasets.CelebA('', split='test', transform=transforms.ToTensor())
-    class_size = torch.zeros(40)
-    for img, attr in dataset:
-        class_size += attr
-    print(class_size / class_size.sum())
-    return
+    # class_size = torch.zeros(40)
+    # for img, attr in dataset:
+    #     class_size += attr
+    # print(class_size / class_size.sum())
+    # return
     # for i in range(30, 10000):
     #     attr = np.array(attr_names)[test_dataset[i][1].bool()]
     #     if 'Eyeglasses' in attr:
